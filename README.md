@@ -1,7 +1,5 @@
 # From Code to Kubernetes: Deploying a Container Image on AKS
 
-![Ports](images/ELK-Stack.png)
-
 When working with Azure, setting up the right environment is the first step toward managing your applications effectively. 
 
 In this guide, we'll walk through the process of creating: 
@@ -453,7 +451,9 @@ spec:
         - containerPort: 5000
 ```
 ##### In Windows:
+
 Press **Ctrl + x** to exit
+
 Press **y**, then **Enter**
 
 ```sh
@@ -493,6 +493,7 @@ spec:
 
 ##### In Windows:
 Press **Ctrl + x** to exit
+
 Press **y**, then **Enter**
 
 ```sh
