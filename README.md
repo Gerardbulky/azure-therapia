@@ -13,7 +13,7 @@ In this guide, we'll walk through the process of creating:
 ## Prerequisites
 - An active Azure account.
 
-## Create a Resource Group
+## Setup a Resource Group
 A resource group is a container for managing your Azure resources. A resource group is essential because deleting a resources group will delete all the resources( eg, VM, cluster), all at once, instead of deleting them individually yourself. To create a new resource group, follow the steps below.
 
 Go to your **Azure portal** and in the search bar, type **resource** and click on the first one.
