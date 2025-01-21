@@ -13,7 +13,7 @@ In this guide, we'll walk through the process of creating:
 ## Prerequisites
 - An active Azure account.
 
-## Create a Resource Group
+## Setup a Resource Group
 A resource group is a container for managing your Azure resources. A resource group is essential because deleting a resources group will delete all the resources( eg, VM, cluster), all at once, instead of deleting them individually yourself. To create a new resource group, follow the steps below.
 
 Go to your **Azure portal** and in the search bar, type **resource** and click on the first one.
@@ -519,4 +519,4 @@ Congratulations on making it this far! This brings us to the end of this tutoria
 - Click on **Delete resource group** and confirm by clicking **Delete** to remove all resources within that group. This will delete everything associated with the resource group, ensuring you don't incur further charges.
 
 ## Conclusion
-In this tutorial, we have walked through the process of deploying a containerized Python application on Azure Kubernetes Service (AKS). Starting from setting up the necessary Azure resources, creating a virtual machine, building and pushing a Docker image to Azure Container Registry (ACR), and finally deploying the application on AKS, you have gained hands-on experience with various Azure services and tools. By following these steps, you should now be able to manage and deploy your applications effectively on AKS. Keep exploring and experimenting with Azure to further enhance your cloud skills. Happy coding!
+In this tutorial, we have walked through the comprehensive process of deploying a containerized application on Azure Kubernetes Service (AKS). Starting from setting up the necessary Azure resources, creating a virtual machine, building and pushing a Docker image to Azure Container Registry (ACR), and finally deploying the application on AKS, you have gained hands-on experience with various Azure services and tools. By following these steps, you should now be able to manage and deploy your applications effectively on AKS. Keep exploring and experimenting with Azure to further enhance your cloud skills. Happy coding!
