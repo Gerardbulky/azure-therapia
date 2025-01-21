@@ -1,4 +1,4 @@
-# From Code to Kubernetes: Deploying a Containerised Application on AKS
+# From Code to Kubernetes: Deploying a Containerised Python Application on AKS
 
 When working with Azure, setting up the right environment is the first step toward managing your applications effectively. 
 
