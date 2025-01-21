@@ -47,18 +47,18 @@ Well done! Your **resource group** has succussfully been created. Now, let's mov
 
 ## Create a Virtual Machine(VM)
 ### 1. Setting up
-Now, we will create a VM within our resource group. In this VM we will install and configure **``kubectl``**, so we can communicate with the K8s cluter from the **CLI**. To create a VM, follow the steps below:
+Now, we will create a VM within our resource group. In this VM we will install and configure **``kubectl``**, so we can communicate with the K8s cluster from the **CLI**. To create a VM, follow the steps below:
 
 Go to your Azure portal and in the search bar, type ``virtual`` and click on the first one.
 
 ![Resouce -group](images/vm.png)
 
-Click on **``Create``**, then Click on **``Azure Virtual machine``**
+Click on **``Create``**, then Click on **``Azure Virtual Machine``**
 
 ![Resouce -group](images/click-on-azure-vm.png)
 
 
-Fill the information as show below:
+Fill in the information as shown below:
 
 ![Resouce -group](images/vm-setup1.png)
 
@@ -66,7 +66,7 @@ Fill the information as show below:
 
 Leave everything as it is and click on **Tags**
 
-Put in your tags, then click on **``Review + create``**.
+Put in your tags, then click on **``Review + Create``**.
 
 ![Resouce -group](images/vm-tag.png)
 
@@ -85,7 +85,7 @@ Click on **`` Go to resource ``**
 Congratulations! You've successfully set up your VM. 
 
 ### 2a. Connect via SSH
-To connect to the VM, click on **connect**, **connect**
+To connect to the VM, click on **Connect**, **Connect**
 
 ![Resouce -group](images/click-on-connect.png)
 
@@ -100,7 +100,7 @@ Copy the command and paste it on your Notepad.
 
 ### 2b. Connect via CLI
 - Create a folder on your PC and name it anything you like. Move the key you created into this folder. 
-- Next, right-click on the folder and open it in a Command-line Interface (CLI). For example, I am using Git Bash in my case.
+- Next, **right-click** on the folder and open it in a Command-line Interface (CLI). For example, I am using Git Bash in my case.
 
 ![Resouce -group](images/git-bash.png)
 
@@ -144,7 +144,7 @@ Congratulations on making it this far!
 
 ## Clone the repository
 
-To build the image locally, first we will clone the repository and cd into the flask-app directory that contains the Dockerfile and use the commands to build the docker image. Run the commands below:
+To build the image locally, first, we will clone the repository and cd into the flask-app directory that contains the Dockerfile and use the commands to build the docker image. Run the commands below:
 
 
 ```sh
@@ -181,7 +181,7 @@ When you run a container with -p 5000:80, any traffic sent to port 5000 on the `
 ### Update Network Security Group Rules
 In other to access our application over Port 5000, we need to update the NSG rules.
 
-Go to **Virtual machines**, then go to **Networking** and click on **Network settings**.
+Go to **Virtual Machines**, then go to **Networking** and click on **Network Settings**.
 
 ![Network Settings](images/network-settings.png)
 
@@ -198,7 +198,7 @@ Open your web browser and enter your Virtual Machine's IP address followed by po
 
 http://<<IP:address>>:5000
 
-Good Job! You can now see your application on your web browser. Grab a cup of coffee while we move on to the next stage: Pushing image to ACR.
+Good Job! You can now see your application on your web browser. Grab a cup of coffee while we move on to the next stage: Pushing the image to ACR.
 
 ## Build & Push Image To Container Registry
 Azure Container Registry(ACR) allows us to store, build and deploy images on Azure. We will need to create a registry to store our image.
@@ -216,7 +216,7 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 az login
 ```
 
-Right-click, copy the **URL** and **code** and paste in your web browser. This will log you into your Azure account from your terminal.
+Right-click, copy the **URL** and **code** and paste it in your web browser. This will log you into your Azure account from your terminal.
 
 ![URL and Code](images/url-and-code.png)
 
@@ -295,9 +295,10 @@ Log in to your Docker Hub account and check your repository to ensure the image 
 
 ## Deploying Image to AKS
 To create an AKS cluster, you can follow the steps below.
+
 If you're experienced with Azure, you can skip the networking setup. If you're new to AKS or Azure, I recommend following each step to understand the related services better.
 
-Go to your Azure portal and in the search bar, type ``kubernetes`` and click on the first one. 
+Go to your Azure portal and in the search bar, type ``Kubernetes`` and click on the first one. 
 
 ![Ports](images/kubernetes-search.png)
 
@@ -316,7 +317,7 @@ In the **Node pools**, Provide the name of the **Node pool** and click on **upda
 ![Ports](images/kubernetes-node-setup.png)
 
 
-In the **Networking**, Select **kubelet** and **Calico** as Network policy.
+In the **Networking**, Select **Kubelet** and **Calico** as Network policy.
 
 ![Ports](images/networking-setup.png)
 
@@ -341,7 +342,7 @@ Congratulations on setting up an AKS Cluster.
 
 
 ### 1. Install Kubectl
-We need to install kubectl to connect the cluster to the terminal. In your terminal, run the following commands:
+We need to install Kubectl to connect the cluster to the terminal. In your terminal, run the following commands:
 
 ```sh
 curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.28.3/2023-11-14/bin/linux/amd64/kubectl
@@ -513,9 +514,9 @@ Copy the **EXTERNAL-IP** address, paste it into your favorite browser, and add p
 
 Congratulations on making it this far! This brings us to the end of this tutorial and I hope you found it helpful
 
-## Delate all your resources and avoid charges:
+## Delete all your resources and avoid charges:
 - Go to your **Azure portal** and navigate to the **resource group** and select the **Resource group name** you created.
 - Click on **Delete resource group** and confirm by clicking **Delete** to remove all resources within that group. This will delete everything associated with the resource group, ensuring you don't incur further charges.
 
 ## Conclusion
-In this tutorial, we have walked through the comprehensive process of deploying a containerized application on Azure Kubernetes Service (AKS). Starting from setting up the necessary Azure resources, creating a virtual machine, building and pushing a Docker image to Azure Container Registry (ACR), and finally deploying the application on AKS, you have gained hands-on experience with various Azure services and tools. By following these steps, you should now be able to manage and deploy your applications effectively on AKS. Keep exploring and experimenting with Azure to further enhance your cloud skills. Happy coding!
+In this tutorial, we have walked through the process of deploying a containerized Python application on Azure Kubernetes Service (AKS). Starting from setting up the necessary Azure resources, creating a virtual machine, building and pushing a Docker image to Azure Container Registry (ACR), and finally deploying the application on AKS, you have gained hands-on experience with various Azure services and tools. By following these steps, you should now be able to manage and deploy your applications effectively on AKS. Keep exploring and experimenting with Azure to further enhance your cloud skills. Happy coding!
