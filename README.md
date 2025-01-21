@@ -230,7 +230,7 @@ You are now logged into Azure from your CLI.
 
 ### 2. Create Azure Registry
 
-Replace the ``<container_registry_name>`` with a container name of your choice. It should be in **lowercase** and **no hyphen(-)** and is **unique**. For example, my container name is **therapiacontainer**, and if you choose to use a similar name, consider adding some characters to make yours unique, such as **therapiacontainer01**.
+Replace the ``**therapiaregistry**`` with a container registry name of your choice. It should be in **lowercase** and **no hyphen(-)** and is **unique**. For example, my container registry name is **therapiaregistry**, and if you choose to use a similar name, consider adding some characters to make yours unique, such as **therapiacontainer01**.
 
 ```sh
 az acr create --resource-group therapia-resource \
@@ -381,6 +381,7 @@ kubectl version --client
 
 ### 2. Connect Azure AKS to CLI
 Go to your Azure cluster portal. Click on **Connect**
+
 From your CLI, run both commands to connect to AKS.
 
 ![Ports](images/connect-to-cluster.png)
